@@ -14,12 +14,10 @@
         public string Name
         {
             get => nomeDoProduto;
-            set => nomeDoProduto = value;
         }
         public string Preco
         {
             get => preco;
-            set => preco = value;
         }
     }
 }

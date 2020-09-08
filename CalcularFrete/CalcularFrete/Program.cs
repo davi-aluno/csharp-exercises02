@@ -10,6 +10,7 @@ namespace CalcularFrete
         static void Main(string[] args)
         {
             Compras[] compras = new Compras[6];
+
             compras[0] = new Compras("mesa", "casa", "R$ 1,05");
             compras[1] = new Compras("tv samsung", "eletronico", "R$ 5,00");
             compras[2] = new Compras("cortina", "casa", "R$ 29,50");

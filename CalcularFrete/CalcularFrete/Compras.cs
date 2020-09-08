@@ -20,19 +20,16 @@ namespace CalcularFrete
         public string nome
         {
             get => _nome;
-            set => _nome = value;
         }
 
         public string tipo
         {
             get => _tipo;
-            set => _tipo = value;
         }
 
         public string preco
         {
             get => _preco;
-            set => _preco = value;
         }
     }
 }
