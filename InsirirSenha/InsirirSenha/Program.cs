@@ -6,30 +6,29 @@ namespace InsirirSenha
     {
         static void Main(string[] args)
         {
-            String[] vetor = new String[5] { "teste", "password", "esqueci", "acertou", "davi123" };
-            bool altenticado = false;
+            string[] vetor = new string[5] { "teste", "password", "esqueci", "acertou", "davi123" };
+            string status = String.Empty;
 
-            while (!altenticado)
+            while (status != "Acesso permitido")
             {
                 Console.Write($"Insira o {vetor[1]}: ");
-                String senha = Console.ReadLine();
-                
-                if (senha == vetor[4])
-                {
-                    Console.WriteLine($"[+] {vetor[3]}!\n" +
-                        $"Acesso permitido");
-                    altenticado = true;
-                }
-                else
-                {
-                    Console.WriteLine("Acesso negado");
-                    altenticado = false;
-                }
-            }
+                string senha = Console.ReadLine();
 
-            if (altenticado)
-            {
-                Console.WriteLine($"\nbem vindo ao nosso sistema, {vetor[0]}!");
+                status = senha == vetor[4] ? "Acesso permitido" : "Acesso negado";
+
+                //status = senha == vetor[4]
+                //      || senha == vetor[3]
+                //      || senha == vetor[2]
+                //      || senha == vetor[1]
+                //      || senha == vetor[0]
+                //         ? "Acesso permitido"
+                //         : "Acesso negado";
+
+                Console.WriteLine(
+                    status == "Acesso permitido"
+                    ? $"{status}\nBem vindo ao sistema, {vetor[0]}"
+                    : status
+                );
             }
         }
     }
