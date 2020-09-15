@@ -14,15 +14,15 @@ namespace InsirirSenha
                 Console.Write($"Insira o {vetor[1]}: ");
                 string senha = Console.ReadLine();
 
-                status = senha == vetor[4] ? "Acesso permitido" : "Acesso negado";
+//                 status = senha == vetor[4] ? "Acesso permitido" : "Acesso negado";
 
-                //status = senha == vetor[4]
-                //      || senha == vetor[3]
-                //      || senha == vetor[2]
-                //      || senha == vetor[1]
-                //      || senha == vetor[0]
-                //         ? "Acesso permitido"
-                //         : "Acesso negado";
+                status = senha == vetor[4]
+                     || senha == vetor[3]
+                     || senha == vetor[2]
+                     || senha == vetor[1]
+                     || senha == vetor[0]
+                        ? "Acesso permitido"
+                        : "Acesso negado";
 
                 Console.WriteLine(
                     status == "Acesso permitido"
